@@ -23,6 +23,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Publish
       run: dotnet publish -c Release --output app
+    - name: Azure CLI script
+      uses: azure/CLI@v1
     - name: Azure Login
       uses: Azure/login@v1.4.5
       with:
